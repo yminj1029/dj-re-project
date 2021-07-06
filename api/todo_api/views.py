@@ -43,6 +43,7 @@ def todos_list(request):
         return JsonResponse({'message': '{} todos were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
 
 
+# todo_id 자동 생성
 def MakeId(title):
     today = datetime.today().strftime("%y%m%d%h%m%s")
     todo_id = title+today
