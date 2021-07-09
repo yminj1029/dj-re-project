@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import { Link } from 'react-router-dom';
-//회원가입/로그인 페이지의 레이아웃을 담당하는 컴포넌트입니다.
 
-//화면 전체 채우기
-const AuthTemplateBlock = styled.div`
+const TodoTemplateBlock = styled.div`
   position: absolute;
   left: 0;
   top: 0;
@@ -30,22 +28,22 @@ const WhiteBox = styled.div`
   }
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.025);
   padding: 2rem;
-  width: 360px;
+  width: 80%;
   background: white;
   border-radius: 2px;
 `;
 
-const AuthTemplate = ({ children }) => {
+const TodoTemplate = ({ children }) => {
   return (
-    <AuthTemplateBlock>
+    <TodoTemplateBlock>
       <WhiteBox>
         <div className="logo-area">
           <Link to="/">TODO</Link>
         </div>
         {children}
       </WhiteBox>
-    </AuthTemplateBlock>
+    </TodoTemplateBlock>
   );
 };
 
-export default AuthTemplate;
+export default TodoTemplate;
