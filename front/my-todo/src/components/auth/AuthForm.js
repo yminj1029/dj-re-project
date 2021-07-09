@@ -15,7 +15,7 @@ const AuthFormBlock = styled.div`
   }
 `;
 
-//스타일링된 imput
+//스타일링된 input
 
 const StyledInput = styled.input`
   font-size: 1rem;
@@ -63,6 +63,11 @@ const AuthForm = ({ type }) => {
     <AuthFormBlock>
       <h3>{text}</h3>
       <form>
+        <StyledInput
+          authComplete="userID"
+          name="userID"
+          placeholder="아이디"
+        ></StyledInput>
         {type === 'join' && (
           <StyledInput
             autoComplete="email"
@@ -71,11 +76,14 @@ const AuthForm = ({ type }) => {
             type="email"
           ></StyledInput>
         )}
-        <StyledInput
-          authComplete="username"
-          name="username"
-          placeholder="아이디"
-        ></StyledInput>
+        {type === 'join' && (
+          <StyledInput
+            autoComplete="username"
+            name="username"
+            placeholder="이름"
+            type="username"
+          ></StyledInput>
+        )}
         <StyledInput
           autoComplete="new-password"
           name="password"
