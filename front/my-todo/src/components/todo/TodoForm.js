@@ -152,6 +152,15 @@ const TodoForm = () => {
           <MdRemoveCircleOutline></MdRemoveCircleOutline>
         </div>
       </Content>
+      <Content>
+        <div className="checkbox">
+          <MdCheckBoxOutlineBlank></MdCheckBoxOutlineBlank>
+          <div className="text">dddddddddddddddddddddd</div>
+        </div>
+        <div className="remove">
+          <MdRemoveCircleOutline></MdRemoveCircleOutline>
+        </div>
+      </Content>
     </TodoTemplateBlock>
   );
 };
