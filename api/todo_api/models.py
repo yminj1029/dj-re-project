@@ -18,3 +18,4 @@ class Todo(models.Model):
     updated_at = models.DateField(auto_now=True, null=True)
     # todo에서 삭제했다면 False, 아니라면 True : 삭제해도 기록 남아있게 함.
     ongoing = models.BooleanField(default=True)
+# ???
