@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  # rest framework 사용
-    'todo_api.apps.TodoApiConfig'  # todo 관리를 할 앱 추가
+    'account',  # 회원가입, 로그인 관리 앱
+    'todo_api'  # todo 관리를 할 앱 추가
 
 ]
 
