@@ -57,3 +57,17 @@ class User(AbstractBaseUser):
 
     def __str__(self):
         return self.nickname
+
+    def has_perm(self, perm, obj=None):
+        return True
+    # True를 반환하여 권한이 있음을 알립니다.
+
+    def has_module_perms(self, app_label):
+        return True
+    # True를 반환하여 주어진 앱(App)의 모델(Model)에 접근 가능하도록 합니다.
+
+    @property
+    def is_staff(self):
+        return self.is_admin
+    # True가 반환되면 장고(django)의 관리자 화면에 로그인 할 수 있습니다.
+    # 참고 :https://dev-yakuza.posstree.com/ko/django/custom-user-model/
