@@ -9,7 +9,7 @@ class Todo(models.Model):
         max_length=70, blank=False, primary_key=True)  # blank는 required의미, null은 db에 null값 들어가도 ok
     todo_title = models.CharField(
         max_length=70, blank=False)
-    user_id = models.CharField(
+    nickname = models.CharField(
         max_length=70, blank=False)
     # json serialized text version of your list
     check_date = models.TextField(null=True)
@@ -18,3 +18,4 @@ class Todo(models.Model):
     updated_at = models.DateField(auto_now=True, null=True)
     # todo에서 삭제했다면 False, 아니라면 True : 삭제해도 기록 남아있게 함.
     ongoing = models.BooleanField(default=True)
+# ???

@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  # rest framework 사용
-    'todo_api.apps.TodoApiConfig'  # todo 관리를 할 앱 추가
+    'account',  # 회원가입, 로그인 관리 앱
+    'todo_api'  # todo 관리를 할 앱 추가
 
 ]
 
@@ -138,3 +139,5 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8081',
 )
+
+AUTH_USER_MODEL = 'account.User'  # 인증은 account앱에서
