@@ -139,3 +139,5 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8081',
 )
+
+AUTH_USER_MODEL = 'account.User'  # 인증은 account앱에서
