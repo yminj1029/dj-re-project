@@ -36,7 +36,6 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    id = models.AutoField(primary_key=True)
     email = models.EmailField(
         default='', max_length=100, null=False, blank=False, unique=True)
     nickname = models.CharField(
