@@ -57,16 +57,18 @@ const textMap = {
   join: '회원가입',
 };
 
-const AuthForm = ({ type }) => {
+const AuthForm = ({ type, form, onChange, onSubmit }) => {
   const text = textMap[type];
   return (
     <AuthFormBlock>
       <h3>{text}</h3>
-      <form>
+      <form onSubmit={onSubmit}>
         <StyledInput
-          authComplete="userID"
-          name="userID"
-          placeholder="아이디"
+          authComplete="nickname"
+          name="nickname"
+          placeholder="닉네임"
+          onChange={onChange}
+          value={form.nickname}
         ></StyledInput>
         {type === 'join' && (
           <StyledInput
@@ -74,14 +76,17 @@ const AuthForm = ({ type }) => {
             name="email"
             placeholder="이메일 주소"
             type="email"
+            onChange={onChange}
+            value={form.email}
           ></StyledInput>
         )}
         {type === 'join' && (
           <StyledInput
-            autoComplete="username"
-            name="username"
+            autoComplete="name"
+            name="name"
             placeholder="이름"
-            type="username"
+            onChange={onChange}
+            value={form.name}
           ></StyledInput>
         )}
         <StyledInput
@@ -89,6 +94,8 @@ const AuthForm = ({ type }) => {
           name="password"
           placeholder="비밀번호"
           type="password"
+          onChange={onChange}
+          value={form.password}
         ></StyledInput>
         {type === 'join' && (
           <StyledInput
@@ -96,6 +103,8 @@ const AuthForm = ({ type }) => {
             name="passwordConfirm"
             placeholder="비밀번호 확인"
             type="password"
+            onChange={onChange}
+            value={form.passwordConfirm}
           ></StyledInput>
         )}
         <ButtonWithMarginTop lime fullWidth>
