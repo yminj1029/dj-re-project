@@ -64,9 +64,9 @@ const AuthForm = ({ type }) => {
       <h3>{text}</h3>
       <form>
         <StyledInput
-          authComplete="userID"
-          name="userID"
-          placeholder="아이디"
+          authComplete="nickname"
+          name="nickname"
+          placeholder="닉네임"
         ></StyledInput>
         {type === 'join' && (
           <StyledInput
